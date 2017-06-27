@@ -3,7 +3,7 @@ const fs = require('fs');
 function BasicCard (front, back) {
 	this.front = front;
 	this.back = back;
-	this.create = funciton() {
+	this.create = function() {
 		var data = {
 			front: this.front,
 			back: this.back,

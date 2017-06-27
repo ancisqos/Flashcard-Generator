@@ -1,9 +1,11 @@
 const fs = require('fs');
 
 function CloseCard (text, cloze) {
-	this.text = text;
+	this.fullText = text;
 	this.cloze = cloze;
-	this.clozeHidden = this.text.replace(this.cloze, '_______');
+	this.clozePartial = cloze;
+	this.clozeHidden = this.text.replace(this.clozeHidden, '________');
+	// log an error if cloze hidden does not appear in input
 	this.create = function() {
 		var info = {
 			text: this.text,
